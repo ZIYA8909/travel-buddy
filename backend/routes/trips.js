@@ -14,7 +14,6 @@ function auth(req, res, next) {
     } catch (e) { return res.status(401).json({ msg: 'invalid token' }) }
 }
 
-// create trip
 router.post('/', auth, async (req, res) => {
     try {
         const { university_id, trip_type, cost_pref, places, notes, is_day_trip } = req.body;
